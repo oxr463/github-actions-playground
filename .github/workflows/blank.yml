@@ -24,4 +24,4 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: echo $GITHUB_REF
+      run: GIT_TAG=$(git describe --tags `git rev-list --tags --max-count=1`); echo $GIT_TAG
